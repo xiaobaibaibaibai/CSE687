@@ -1,0 +1,36 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Mon Jan 21 00:49:03 2019
+     Path: "D:\Syracuse\CSE687\CSE687\Cpp11-BlockingQueue\Cpp11-BlockingQueue"
+     Args: Cpp11-BlockingQueue.h, /m, /r, /f
+
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1      13
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+     Cpp11-BlockingQueue.h       class                      BlockingQueue      47      17      12
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      48       2       1
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      68       7       1
+     Cpp11-BlockingQueue.h    function                          operator=      79       9       1
+     Cpp11-BlockingQueue.h    function                                deQ      92      16       3
+     Cpp11-BlockingQueue.h    function                                enQ     112       7       2
+     Cpp11-BlockingQueue.h    function                              front     123       6       1
+     Cpp11-BlockingQueue.h    function                              clear     133       5       1
+     Cpp11-BlockingQueue.h    function                               size     142       4       1
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+
+
+    searched     2 dirs
+   processed     1 files

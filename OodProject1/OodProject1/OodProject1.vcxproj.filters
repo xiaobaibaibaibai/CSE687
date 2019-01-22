@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Convert.cpp">
+    <ClCompile Include="SourceCodePublisher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test.cpp">
@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test.h">
+    <ClInclude Include="SourceCodePublisher.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
