@@ -143,14 +143,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Process.cpp" />
     <ClCompile Include="Proj1Helper.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Process.h" />
     <ClInclude Include="Proj1Helper.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Proj1Helper.cpp.html" />
-    <None Include="..\Proj1Helper.h.html" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

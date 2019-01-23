@@ -1,12 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Cpp11-BlockingQueue",
-    "\\Cpp11-BlockingQueue\\Cpp11-BlockingQueue",
-    "\\OodProject1",
-    "\\OodProject1Helper\\OodProject1Helper",
-    "\\OodProject1\\OodProject1"
+    "\\DirectoryNavigator",
+    "\\DirectoryNavigator\\DirExplorer-Naive",
+    "\\Process\\Process",
+    "\\projectTest1\\projectTest1"
   ],
-  "SelectedNode": "\\OodProject1\\OodProject1.sln",
+  "SelectedNode": "\\DirectoryNavigator\\DirectoryNavigator.sln",
   "PreviewInSolutionExplorer": false
 }

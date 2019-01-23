@@ -22,12 +22,12 @@ std::string X::str()
 
 #include <iostream>
 
-int main()
-{
-  std::cout << "\n  Class to be Webified";
-  std::cout << "\n ----------------------";
-
-  X x("instance of X here");
-  std::cout << "\n  " << x.str();
-  std::cout << "\n\n";
-}
+//int main()
+//{
+//  std::cout << "\n  Class to be Webified";
+//  std::cout << "\n ----------------------";
+//
+//  X x("instance of X here");
+//  std::cout << "\n  " << x.str();
+//  std::cout << "\n\n";
+//}

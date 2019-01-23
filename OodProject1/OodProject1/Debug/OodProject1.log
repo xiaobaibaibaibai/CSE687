@@ -1,4 +1,4 @@
-﻿  test.cpp
-  SourceCodePublisher.cpp
+﻿  Process.cpp
+  test.cpp
   Generating Code...
-  OodProject1.vcxproj -> D:\Syracuse\CSE687\CSE687\OodProject1\Debug\OodProject1.exe
+LINK : fatal error LNK1561: entry point must be defined

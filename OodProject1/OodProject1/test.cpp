@@ -12,7 +12,7 @@ bool verifyName(std::string fnames[]) {
 	return true;
 }
 
-int main(int argc, char *argv[])
+int main12(int argc, char *argv[])
 {
 	std::string current_exec_name = argv[0];
 	std::vector<std::string> all_args;
