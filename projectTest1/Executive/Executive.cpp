@@ -24,13 +24,9 @@ int main(int argc, char *argv[])
 		de.addPattern(patt);
 	}
 
-	/*if (pcl.hasOption('s'))
-	{
-		de.recurse();
-	}*/
 	de.recurse();
 	de.search(); // this function search and call a find() function to print all path
-	//de.showStats();
+
 	std::vector<std::string> result = de.getFileCollection();
 	for (std::string s : result) {
 		std::cout << s << '\n';

@@ -1,3 +1,3 @@
 cd .\Debug\
-start Executive.exe .. *.cpp
+start Executive.exe ../inputFile *.cpp *.h
 cd ..

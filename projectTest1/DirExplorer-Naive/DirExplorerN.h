@@ -100,9 +100,8 @@ namespace FileSystem
     size_t dirCount();
     void showStats();
 
-	void collectFiles(const std::string& dirname, const std::string& filenam);
+	void collectFilesPath(const std::string& dirname, const std::string& filenam);
 	std::vector<std::string> getFileCollection();
-	void find1(const std::string& path, const std::string& commandPath);
 
   private:
     std::string path_;
@@ -137,7 +136,7 @@ namespace FileSystem
 
   void DirExplorerN::search()
   {
-    find(path_);
+	  find(path_);
   }
   //----< search for directories and their files >-------------------
   /*
@@ -149,8 +148,6 @@ namespace FileSystem
     // show current directory
     std::string fpath = FileSystem::Path::getFullFileSpec(path);
     doDir(fpath);
-	std::cout << "--->>>  " + path_ + "\n";
-	std::cout << "--->>>  " + fpath + "\n\n";
 
     for (auto patt : patterns_)
     {
@@ -158,10 +155,10 @@ namespace FileSystem
       for (auto f : files)
       {
         doFile(f);  // show each file in current directory
-		collectFiles(fpath, f);
+		collectFilesPath(fpath, f);
       }
     }
-
+	
     std::vector<std::string> dirs = FileSystem::Directory::getDirectories(fpath);
     for (auto d : dirs)
     {
@@ -177,43 +174,6 @@ namespace FileSystem
         doDir(dpath);  // show subdirectories
       }
     }
-  }
-  //----< clone find function >-------
-
-  void DirExplorerN::find1(const std::string& path, const std::string& commandPath)
-  {
-	  // show current directory
-	  std::string fpath = FileSystem::Path::getFullFileSpec(path);
-	  doDir(fpath);
-	  /*std::cout << "--->>>  " + path_ + "\n";
-	  std::cout << "--->>>  " + fpath + "\n\n";*/
-
-	  for (auto patt : patterns_)
-	  {
-		  std::vector<std::string> files = FileSystem::Directory::getFiles(fpath, patt);
-		  for (auto f : files)
-		  {
-			  doFile(f);  // show each file in current directory
-			  collectFiles(fpath, f);
-		  }
-	  }
-
-	  std::vector<std::string> dirs = FileSystem::Directory::getDirectories(fpath);
-	  for (auto d : dirs)
-	  {
-		  //std::cout << "-----> " << d << '\n';
-		  if (d == "." || d == "..")
-			  continue;
-		  std::string dpath = fpath + "\\" + d;
-		  if (recurse_)
-		  {
-			  find1(dpath, dpath);   // recurse into subdirectories
-		  }
-		  else
-		  {
-			  doDir(dpath);  // show subdirectories
-		  }
-	  }
   }
   //----< an application changes to enable specific file ops >-------
 
@@ -249,7 +209,7 @@ namespace FileSystem
   }
   //----< add specified file name and its path  >---------------------
 
-  void DirExplorerN::collectFiles(const std::string& dirname, const std::string& filename) {
+  void DirExplorerN::collectFilesPath(const std::string& dirname, const std::string& filename) {
 	  files_path.push_back(dirname + "\\" + filename);
   }
   //----< return vecotor whose files are need to be converted  >---------------------
