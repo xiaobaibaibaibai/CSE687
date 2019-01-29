@@ -53,6 +53,9 @@
  *
  * Maintenance History:
  * --------------------
+ * ver 1.4 : 29 Jan 2019
+ * - Add two new functions to collect path and names which matches 
+ *	the regular expression of cpp and header file . 
  * ver 1.3 : 19 Aug 2018
  * - Removed some options to make this version simple.  Those are
  *   implemented in the more advanced navigators, presented here.
@@ -67,6 +70,7 @@
 #include <vector>
 #include <iostream>
 #include "../FileSystem/FileSystem.h"
+#include <regex>
 
 namespace FileSystem
 {
@@ -210,7 +214,9 @@ namespace FileSystem
   //----< add specified file name and its path  >---------------------
 
   void DirExplorerN::collectFilesPath(const std::string& dirname, const std::string& filename) {
-	  files_path.push_back(dirname + "\\" + filename);
+	  std::regex e("([\\w-])+\\.(cpp|h)");
+	  if (std::regex_match(filename, e))
+		  files_path.push_back(dirname + "\\" + filename);
   }
   //----< return vecotor whose files are need to be converted  >---------------------
   

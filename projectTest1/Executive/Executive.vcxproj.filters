@@ -35,5 +35,8 @@
     <ClInclude Include="..\FileSystem\FileSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Converter\Converter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -156,6 +156,7 @@
     <ClCompile Include="Executive.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Converter\Converter.h" />
     <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h" />
     <ClInclude Include="..\FileSystem\FileSystem.h" />
     <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h" />

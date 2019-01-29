@@ -1,0 +1,58 @@
+<!Doctype html><head><style>body{padding: 15px 40px;font-family: Consolas;font-size: 1.25em;font-weight: normal;}</style></head><body><h3>Project #1 helper</h3><pre>
+///////////////////////////////////////////////////////////////////////
+// Process.cpp - class used to start process                         //
+// ver 1.0                                                           //
+// Jim Fawcett, CSE687 - Object Oriented Design, Spring 2018         //
+///////////////////////////////////////////////////////////////////////
+
+#include "Process.h"
+#include &ltiostream&gt
+//#include &ltwindows.h&gt
+#include &ltconio.h&gt
+
+//  WIN32;_DEBUG;_CONSOLE;TEST_PROCESS;%(PreprocessorDefinitions)
+
+#ifdef TEST_PROCESS
+
+int main1()
+{
+	std::cout &lt&lt "\n  Demonstrating code pop-up in notepad";
+	std::cout &lt&lt "\n ======================================";
+
+	Process p;
+	p.title("test application");
+	//std::string appPath = "c:/windows/system32/notepad.exe";  // path to application to start
+	std::string appPath = "C:/Windows/explorer.exe";  // path to application to start
+	//std::string appPath = "c:/windows/notepad.exe";
+	p.application(appPath);
+
+	//std::string cmdLine = "../Proj1Helper.h.html";  // asking notepad to display Process.h
+	std::string cmdLine = "/ ../../projectTest1/Proj1Helper.h.html";
+	p.commandLine(cmdLine);
+
+	std::cout &lt&lt "\n  Will start notepad 5 times and each time wait for termination.";
+	std::cout &lt&lt "\n  You need to kill each window (upper right button) to continue.";
+	std::cout &lt&lt "\n  Press key to start";
+	_getche();
+	       
+	for (int i = 0; i &lt 2; ++i)
+	{
+		std::cout &lt&lt "\n  starting process: \"" &lt&lt appPath &lt&lt "\"";
+		std::cout &lt&lt "\n  with this cmdlne: \"" &lt&lt cmdLine &lt&lt "\"";
+		p.create();
+		CBP callback = []() { std::cout &lt&lt "\n  --- child process exited with this message ---"; };
+		p.setCallBackProcessing(callback);
+		p.registerCallback();
+
+		WaitForSingleObject(p.getProcessHandle(), INFINITE);  // wait for created process to terminate
+	}
+
+	std::cout &lt&lt "\n  after OnExit";
+	std::cout.flush();
+	char ch;
+	std::cin.read(&ch, 1);
+	return 0;
+}
+
+#endif
+</pre></body></html>

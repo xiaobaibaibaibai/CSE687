@@ -3,9 +3,12 @@
 #include "../DirExplorer-Naive/DirExplorerN.h"
 #include "../Utilities/StringUtilities/StringUtilities.h"
 #include "../Utilities/CodeUtilities/CodeUtilities.h"
+#include "../Converter/Converter.h"
+
 
 using namespace Utilities;
 using namespace FileSystem;
+
 
 int main(int argc, char *argv[])
 {
@@ -28,9 +31,16 @@ int main(int argc, char *argv[])
 	de.search(); // this function search and call a find() function to print all path
 
 	std::vector<std::string> result = de.getFileCollection();
+	/*
 	for (std::string s : result) {
 		std::cout << s << '\n';
 	}
+	*/
+	ConverterHtml con1;
+	con1.openFile(result, "../outputhtml");
+	/*con1.openFile(result, "../outputhtml");*/
+	
+
 
 	std::cout << "\n\n";
 	getchar();

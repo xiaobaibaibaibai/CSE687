@@ -1,0 +1,54 @@
+<!Doctype html><head><style>body{padding: 15px 40px;font-family: Consolas;font-size: 1.25em;font-weight: normal;}</style></head><body><h3>Project #1 helper</h3><pre>
+/////////////////////////////////////////////////////////////////////
+// Proj1Helper.cpp - will become webified                          //
+//                                                                 //
+// Jim Fawcett, CSE687 - Object Oriented Design, Spring 2019       //
+/////////////////////////////////////////////////////////////////////
+
+
+
+#include "Converter.h"
+#include &ltiostream&gt
+#include &ltfstream&gt
+#include &ltstring&gt
+#include &ltvector&gt
+
+#ifdef TEST_PROCESS
+int main(int argc, char* argv[]) {
+	std::string line;
+	std::vector&ltstd::string&gt all_args;
+	all_args.assign(argv + 1, argv + argc);
+
+
+	for (size_t i = 1; i &lt all_args.size(); i++) {
+		std::cout &lt&lt all_args[i] &lt&lt std::endl;
+		
+		std::ifstream readFile(all_args[i]);
+		if (readFile.is_open()) {
+			std::string fileName = all_args[i];
+			std::ofstream writeFile("../outputhtml/" + fileName + ".html");
+			if (writeFile.is_open()) {
+				std::string beforePre = "&lt!Doctype html&gt&lthead&gt&ltstyle&gt"
+					"body{padding: 15px 40px;font-family: Consolas;font-size: 1.25em;font-weight: normal;}"
+					"&lt/style&gt&lt/head&gt&ltbody&gt&lth3&gtProject #1 helper&lt/h3&gt&ltpre&gt";
+				writeFile &lt&lt beforePre;
+				std::string cppCode = "";
+				while (getline(readFile, line)) {
+					cppCode = cppCode + line + '\n';
+				}
+				writeFile &lt&lt cppCode;
+				writeFile &lt&lt "&lt/pre&gt&lt/body&gt&lt/html&gt";
+				writeFile.close();
+			}
+			readFile.close();
+		}
+		
+	}
+	return 0;
+}
+
+#endif
+
+
+
+</pre></body></html>
