@@ -7,7 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Executive", "Executive\Exec
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Converter", "Converter\Converter.vcxproj", "{291473D8-ABDC-435A-B7FF-11CE081AB5B5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Displayer", "Displayer\Displayer.vcxproj", "{FF6FAE23-2609-4913-BDF1-2552FC068951}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Display", "Displayer\Displayer.vcxproj", "{FF6FAE23-2609-4913-BDF1-2552FC068951}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Process", "Process\Process.vcxproj", "{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{FF6FAE23-2609-4913-BDF1-2552FC068951}.Release|x64.Build.0 = Release|x64
 		{FF6FAE23-2609-4913-BDF1-2552FC068951}.Release|x86.ActiveCfg = Release|Win32
 		{FF6FAE23-2609-4913-BDF1-2552FC068951}.Release|x86.Build.0 = Release|Win32
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Debug|x64.ActiveCfg = Debug|x64
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Debug|x64.Build.0 = Debug|x64
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Debug|x86.Build.0 = Debug|Win32
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Release|x64.ActiveCfg = Release|x64
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Release|x64.Build.0 = Release|x64
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Release|x86.ActiveCfg = Release|Win32
+		{5E2548A1-C280-49E1-A2B6-55F4BA12B3F2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
