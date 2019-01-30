@@ -3,7 +3,7 @@
 
 
 int main() {
-	Converter con();
+	ConverterHtml con;
 
 	return 0;
 }

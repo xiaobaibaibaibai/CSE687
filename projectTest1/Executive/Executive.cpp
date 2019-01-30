@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	}
 	*/
 	ConverterHtml con1;
-	con1.openFile(result, "../outputhtml");
+	con1.openFile(result, "../outputhtml/");
 	/*con1.openFile(result, "../outputhtml");*/
 	
 

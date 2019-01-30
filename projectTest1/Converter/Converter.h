@@ -91,13 +91,13 @@ void ConverterHtml::openFile(std::vector<std::string> files_path, std::string sa
 		if (readFile.is_open()) {
 			std::size_t found = path.find_last_of("/\\");
 			std::string fileName = path.substr(found + 1);
-			std::ofstream writeFile("../outputhtml/" + fileName + ".html");
+			std::ofstream writeFile(save_path + fileName + ".html");
 			if (writeFile.is_open()) {
 				writeFile << convertCode(readFile);
 				writeFile.close();
 			}
 			else {
-				std::cout << "../outputhtml/" << fileName << " cannot open" << '\n';
+				std::cout << save_path << fileName << " cannot open" << '\n';
 			}
 			readFile.close();
 		}

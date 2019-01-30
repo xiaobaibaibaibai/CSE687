@@ -1,1 +1,3 @@
-devenv projectTest1.sln /ReBuild
+set projectSolution=projectTest1.sln
+
+devenv %projectSolution% /ReBuild

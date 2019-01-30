@@ -1,8 +1,2 @@
 ﻿  Converter.cpp
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(114): error C2065: 'line': undeclared identifier
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(115): error C2065: 'line': undeclared identifier
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(115): error C3312: no callable 'begin' function found for type 'unknown-type'
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(115): error C3312: no callable 'end' function found for type 'unknown-type'
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(116): error C2065: 'cha': undeclared identifier
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(118): error C2065: 'cha': undeclared identifier
-d:\syracuse\cse687\cse687\projecttest1\converter\converter.h(121): error C2065: 'cha': undeclared identifier
+  Converter.vcxproj -> D:\Syracuse\CSE687\CSE687\projectTest1\Debug\Converter.exe

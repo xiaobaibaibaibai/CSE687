@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DirectoryNavigator\\DirExplorer-Naive",
-    "\\Process\\Process",
-    "\\projectTest1"
+    "\\projectTest1",
+    "\\projectTest1\\Displayer"
   ],
   "SelectedNode": "\\projectTest1\\projectTest1.sln",
   "PreviewInSolutionExplorer": false
