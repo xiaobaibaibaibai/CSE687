@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\projectTest1",
-    "\\projectTest1\\Displayer"
+    "\\projectTest1\\Converter",
+    "\\projectTest1\\DirExplorer-Naive",
+    "\\projectTest1\\Display",
+    "\\projectTest1\\Executive"
   ],
-  "SelectedNode": "\\projectTest1\\projectTest1.sln",
+  "SelectedNode": "\\projectTest1\\Display",
   "PreviewInSolutionExplorer": false
 }

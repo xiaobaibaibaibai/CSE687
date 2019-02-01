@@ -3,6 +3,7 @@
 // ver 1.0                                                         //
 // Wentan Bai, CSE687 - Object Oriented Design, Spring 2019        //
 /////////////////////////////////////////////////////////////////////
+#ifdef TEST_CONVERTER
 
 #include "Converter.h"
 
@@ -24,3 +25,4 @@ int main() {
 
 	return 0;
 }
+#endif

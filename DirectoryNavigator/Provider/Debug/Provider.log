@@ -1,5 +1,0 @@
-﻿  FileSystem.cpp
-  DFS.cpp
-d:\syracuse\cse687\cse687\directorynavigator\provider\dfs.h(64): error C3861: 'count_': identifier not found
-  d:\syracuse\cse687\cse687\directorynavigator\provider\dfs.h(69): note: see reference to class template instantiation 'Search::DFS<IProvider>' being compiled
-  Generating Code...

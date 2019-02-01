@@ -3,6 +3,7 @@
 // ver 1.0                                                         //
 // Wentan Bai, CSE687 - Object Oriented Design, Spring 2019        //
 /////////////////////////////////////////////////////////////////////
+#ifdef TEST_EXECUTIVE
 
 #include "Executive.h"
 
@@ -15,3 +16,4 @@ int main(int argc, char *argv[])
 	getchar();
 	return 0;
 }
+#endif

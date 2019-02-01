@@ -4,6 +4,8 @@
 // Wentan Bai, CSE687 - Object Oriented Design, Spring 2019        //
 /////////////////////////////////////////////////////////////////////
 
+#ifdef TEST_DISPLAYER
+
 #include "Displayer.h"
 
 int main() {
@@ -26,3 +28,4 @@ int main() {
 
 	return 0;
 }
+#endif
