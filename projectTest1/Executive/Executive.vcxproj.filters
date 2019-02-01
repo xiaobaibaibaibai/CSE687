@@ -23,19 +23,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h">
+    <ClInclude Include="..\Converter\Converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Utilities\StringUtilities\StringUtilities.h">
+    <ClInclude Include="Executive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h">
+    <ClInclude Include="..\Display\Displayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\FileSystem\FileSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Converter\Converter.h">
+    <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Utilities\StringUtilities\StringUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

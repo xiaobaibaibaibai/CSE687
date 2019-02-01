@@ -158,9 +158,11 @@
   <ItemGroup>
     <ClInclude Include="..\Converter\Converter.h" />
     <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h" />
+    <ClInclude Include="..\Display\Displayer.h" />
     <ClInclude Include="..\FileSystem\FileSystem.h" />
     <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h" />
     <ClInclude Include="..\Utilities\StringUtilities\StringUtilities.h" />
+    <ClInclude Include="Executive.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

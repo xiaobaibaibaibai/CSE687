@@ -227,9 +227,9 @@ namespace Utilities
       return;
     }
 
-    path_ = argv[1];
+    path_ = argv[2];
 
-    for (int i = 2; i < argc; ++i)
+    for (int i = 3; i < argc; ++i)
     {
       if (argv[i][0] == '/')
       {

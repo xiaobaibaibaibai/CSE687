@@ -20,8 +20,6 @@ ProcessCmdLine::Usage customUsage()
   usage += "\n    path is relative or absolute path where processing begins";
   usage += "\n    [/option]* are one or more options of the form:";
   usage += "\n      /s - walk directory recursively";
-  //usage += "\n      /h - hide empty directories";
-  //usage += "\n      /a - on stopping, show all files in current directory";
   usage += "\n    [pattern]* are one or more pattern strings of the form:";
   usage += "\n      *.h *.cpp *.cs *.txt or *.*";
   usage += "\n";
@@ -57,7 +55,7 @@ int main(int argc, char *argv[])
     de.recurse();
   }
 
-  de.search(); // this function search and call a find() function to print all path
+  de.search();
   de.showStats();
 
   std::cout << "\n\n";

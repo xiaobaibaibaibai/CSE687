@@ -19,15 +19,16 @@
  * a using application to supply this processing without changing
  * the Directory Navigator. 
  *
- * Other projects in this solution do just that, in different ways.  
+ * Other projects in the DirectoryNavigator folder in Repository/Cpp 
+   do just that, in different ways.  
 
- * - DirExplorer-Naive:
+ * - DirExplorer-Naive (this project):
  *     Implements basic processing well, but applications have to
  *     change its code to affect how files and directories are
  *     handled.
  * - DirExplorer-Template:
  *     Applications provide template class parameters to define file
- *      and directory processing.
+ *     and directory processing.
  * - DirExplorer-Inheritance:
  *     Applications subclass DirExplorerI, overriding virtual functions
  *     doFile, doDir, and doQuit to define how files and directories
@@ -41,8 +42,8 @@
  *     Applications implement a file system provider that implements
  *     a Provider interface published by DirExplorerP.
  *     
- * We'll be using this solution to illustrate techniques for building
- * flexible software.
+ * We'll be using the Repository/Cpp solution to illustrate techniques 
+ * for building flexible software.
  *
  * Required Files:
  * ---------------
@@ -53,9 +54,8 @@
  *
  * Maintenance History:
  * --------------------
- * ver 1.4 : 29 Jan 2019
- * - Add two new functions to collect path and names which matches 
- *	the regular expression of cpp and header file . 
+ * ver 1.4 : 24 Jan 2019
+ * - Removed all projects except those needed for DirExplorerN.
  * ver 1.3 : 19 Aug 2018
  * - Removed some options to make this version simple.  Those are
  *   implemented in the more advanced navigators, presented here.
@@ -118,13 +118,13 @@ namespace FileSystem
 
   //----< construct DirExplorerN instance with default pattern >-----
 
-  DirExplorerN::DirExplorerN(const std::string& path) : path_(path)
+  inline DirExplorerN::DirExplorerN(const std::string& path) : path_(path)
   {
     patterns_.push_back("*.*");
   }
   //----< add specified patterns for selecting file names >----------
 
-  void DirExplorerN::addPattern(const std::string& patt)
+  inline void DirExplorerN::addPattern(const std::string& patt)
   {
     if (patterns_.size() == 1 && patterns_[0] == "*.*")
       patterns_.pop_back();
@@ -132,24 +132,25 @@ namespace FileSystem
   }
   //----< set option to recusively walk dir tree >-------------------
 
-  void DirExplorerN::recurse(bool doRecurse)
+  inline void DirExplorerN::recurse(bool doRecurse)
   {
     recurse_ = doRecurse;
   }
   //----< start Depth First Search at path held in path_ >-----------
 
-  void DirExplorerN::search()
+  inline void DirExplorerN::search()
   {
-	  find(path_);
+    find(path_);
   }
   //----< search for directories and their files >-------------------
   /*
     Recursively finds all the dirs and files on the specified path,
     executing doDir when entering a directory and doFile when finding a file
   */
-  void DirExplorerN::find(const std::string& path)
+  inline void DirExplorerN::find(const std::string& path)
   {
     // show current directory
+
     std::string fpath = FileSystem::Path::getFullFileSpec(path);
     doDir(fpath);
 
@@ -162,7 +163,7 @@ namespace FileSystem
 		collectFilesPath(fpath, f);
       }
     }
-	
+
     std::vector<std::string> dirs = FileSystem::Directory::getDirectories(fpath);
     for (auto d : dirs)
     {
@@ -181,37 +182,36 @@ namespace FileSystem
   }
   //----< an application changes to enable specific file ops >-------
 
-  void DirExplorerN::doFile(const std::string& filename)
+  inline void DirExplorerN::doFile(const std::string& filename)
   {
     ++fileCount_;
-    //std::cout << "\n  -->>   " << filename;
+    //std::cout << "\n  --   " << filename;
   }
   //----< an application changes to enable specific dir ops >--------
 
-  void DirExplorerN::doDir(const std::string& dirname)
+  inline void DirExplorerN::doDir(const std::string& dirname)
   {
     ++dirCount_;
-    //std::cout << "\n  ++!!++ " << dirname;
+    //std::cout << "\n  ++ " << dirname;
   }
   //----< return number of files processed >-------------------------
 
-  size_t DirExplorerN::fileCount()
+  inline size_t DirExplorerN::fileCount()
   {
     return fileCount_;
   }
   //----< return number of directories processed >-------------------
 
-  size_t DirExplorerN::dirCount()
+  inline size_t DirExplorerN::dirCount()
   {
     return dirCount_;
   }
   //----< show final counts for files and dirs >---------------------
 
-  void DirExplorerN::showStats()
+  inline void DirExplorerN::showStats()
   {
     std::cout << "\n\n  processed " << fileCount_ << " files in " << dirCount_ << " directories";
   }
-  //----< add specified file name and its path  >---------------------
 
   void DirExplorerN::collectFilesPath(const std::string& dirname, const std::string& filename) {
 	  std::regex e("([\\w-])+\\.(cpp|h)");
@@ -219,9 +219,8 @@ namespace FileSystem
 		  files_path.push_back(dirname + "\\" + filename);
   }
   //----< return vecotor whose files are need to be converted  >---------------------
-  
+
   std::vector<std::string> DirExplorerN::getFileCollection() {
 	  return files_path;
   }
-
 }
