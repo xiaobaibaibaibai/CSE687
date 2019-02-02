@@ -49,6 +49,7 @@ void Displayer::displayPage() {
 	p.application(browser);
 	for (std::string url : urls) {
 		p.commandLine("--new-window " + url);
+		std::cout << "--new-window " + url << std::endl;
 		p.create();
 		CBP callback = [&url]() { std::cout << "\n --- process is exited----"; };
 		p.setCallBackProcessing(callback);
