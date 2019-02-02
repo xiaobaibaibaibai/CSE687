@@ -1,3 +1,0 @@
-﻿  FileSystem.cpp
-FileSystem.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  FileSystemDemo.vcxproj -> Z:\CSE687\code\Project1HelpS2019\DirectoryNavigator\Debug\FileSystemDemo.exe
